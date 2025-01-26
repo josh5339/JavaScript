@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JavaScript Loops</title>
+    </head>
+    <body>
+      <h1>JavaScript Loops Examples</h1>
+      <p>Open the console to see the output of the program.</p>
+
+      <script>
+        // Part 1: For loop to check odd/even
+
+        for (let i = 0; i <= 10; i++) {
+          if (i % 2 === 0) {
+            console.log('Count ${i} is even');
+          } else {
+            console.log('Count ${i} is odd');
+          }
+        }
+
+        //Part 2: Do While Loop
+        let myNum = parseInt(prompt("Enter a number between 5 and 20:"));
+        while (isNaN(myNum) || myNum < 5 || myNum > 20) {
+          myNum = parseInt(prompt("Invalid input. Please enter a number between 5 and 20:"));
+        }
+
+        let counter = 1;
+        do {
+          console.log('Counter: ${counter}');
+          counter++;
+        } while (counter <= myNum);
+
+        //Part 3: Array of subjects
+        const subjects = ["Accounting", "Algebra", "Programming", "Art", "Data Analytics"];
+        subjects.forEach((subject) => {
+          console.log(subject);
+        });
+        console.log(subjects.join(", "));
+        </script>
+        </body>
+        </html>
